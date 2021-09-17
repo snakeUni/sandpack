@@ -3,7 +3,9 @@
         "name": "Default",
         "type": "SIDEKICK",
         "items": [
-            { "type": "PREVIEW", "port": "6006" }
+            { "type": "PREVIEW", "port": "6006" },
+            { "type": "TASK_LOG", "task": "build" }, 
+            { "type": "TERMINAL" }
         ]
     }
 }
