@@ -7,7 +7,8 @@ import { CSBIcon } from "../icons";
 import { isDarkColor } from "../utils/stringUtils";
 
 export const OpenInCodeSandboxButton: React.FC = () => {
-  const url = useCodeSandboxLink();
+  const linkRef = React.useRef<HTMLAnchorElement>(null);
+  const url = useCodeSandboxLink(linkRef.current);
   const { theme } = useSandpackTheme();
   const c = useClasser("sp");
 
@@ -17,6 +18,7 @@ export const OpenInCodeSandboxButton: React.FC = () => {
 
   return (
     <a
+      ref={linkRef}
       className={c("button", "icon-standalone", csbIconClass)}
       href={url}
       rel="noreferrer noopener"
