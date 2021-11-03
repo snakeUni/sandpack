@@ -1,14 +1,13 @@
 import { useClasser } from "@code-hike/classer";
 import * as React from "react";
 
-import { useCodeSandboxLink } from "../hooks/useCodeSandboxLink";
 import { useSandpackTheme } from "../hooks/useSandpackTheme";
 import { CSBIcon } from "../icons";
 import { isDarkColor } from "../utils/stringUtils";
 
+import { BareCodeSandboxButton } from "./BareCodeSandboxButton";
+
 export const OpenInCodeSandboxButton: React.FC = () => {
-  const linkRef = React.useRef<HTMLAnchorElement>(null);
-  const url = useCodeSandboxLink(linkRef.current);
   const { theme } = useSandpackTheme();
   const c = useClasser("sp");
 
@@ -17,15 +16,10 @@ export const OpenInCodeSandboxButton: React.FC = () => {
     : "csb-icon-light";
 
   return (
-    <a
-      ref={linkRef}
+    <BareCodeSandboxButton
       className={c("button", "icon-standalone", csbIconClass)}
-      href={url}
-      rel="noreferrer noopener"
-      target="_blank"
-      title="Open in CodeSandbox"
     >
       <CSBIcon />
-    </a>
+    </BareCodeSandboxButton>
   );
 };

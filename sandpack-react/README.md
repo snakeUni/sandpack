@@ -580,7 +580,7 @@ Plus, `useSandpack` exposes a bunch of methods that you can use to manage the cu
 | `setActiveFile` | Set a specific file as active in a given path |
 | `updateFile`    | Update the content of a file in a given path  |
 
-#### useActiveCode, useCodeSandboxLink, useSandpackNavigation
+#### useActiveCode, useSandpackNavigation
 
 Some of the common functionalities of sandpack are also extracted into
 specialized hooks. These all use `useSandpack` under the hood, but abstract away
@@ -597,22 +597,6 @@ const CustomRefreshButton = () => {
     <button type="button" onClick={() => refresh()}>
       Refresh Sandpack
     </button>
-  );
-};
-```
-
-Similarly, we can build a custom link that opens the sandpack files in a new tab
-on https://codesandbox.io. Let's the use `useCodeSandboxLink` for that:
-
-```jsx
-import { useCodeSandboxLink } from "@codesandbox/sandpack-react";
-
-const CustomOpenInCSB = () => {
-  const url = useCodeSandboxLink();
-  return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      Open in CodeSandbox
-    </a>
   );
 };
 ```

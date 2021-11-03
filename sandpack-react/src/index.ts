@@ -12,10 +12,10 @@ export * from "./common/Layout";
 export * from "./common/Stack";
 export * from "./common/ErrorOverlay";
 export * from "./common/LoadingOverlay";
+export * from "./common/CodeSandboxButton";
 export * from "./common/OpenInCodeSandboxButton";
 
 export * from "./hooks/useActiveCode";
-export * from "./hooks/useCodeSandboxLink";
 export * from "./hooks/useErrorMessage";
 export * from "./hooks/useLoadingOverlayState";
 export * from "./hooks/useSandpack";

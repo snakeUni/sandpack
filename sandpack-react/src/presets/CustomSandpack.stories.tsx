@@ -12,13 +12,11 @@ import {
   SandpackCodeViewer,
   SandpackCodeEditor,
   SandpackTranspiledCode,
-  useCodeSandboxLink,
   useSandpackTheme,
   useActiveCode,
   useSandpackNavigation,
   SandpackStack,
 } from "../index";
-import { getThemeStyleSheet } from "../themes";
 
 export default {
   title: "presets/Custom Sandpack",
@@ -70,11 +68,6 @@ export const UsingVisualElements: React.FC = () => (
     </SandpackThemeProvider>
   </SandpackProvider>
 );
-
-const CustomOpenInCSB = () => {
-  const url = useCodeSandboxLink();
-  return <a href={url}>Open in CodeSandbox</a>;
-};
 
 const CustomRefreshButton = () => {
   const { refresh } = useSandpackNavigation();
@@ -129,7 +122,7 @@ export const UsingHooks: React.FC = () => (
         }}
       >
         <CustomRefreshButton />
-        <CustomOpenInCSB />
+        {/* <CustomOpenInCSB /> TODO */}
       </div>
 
       <div style={{ width: 400 }}>
