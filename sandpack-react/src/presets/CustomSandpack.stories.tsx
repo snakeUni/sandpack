@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import { useSandpack } from "../hooks/useSandpack";
-import type { ViewportSize } from "../index";
+import { BareCodeSandboxButton, ViewportSize } from "../index";
 import {
   SandpackPreview,
   SandpackProvider,
@@ -78,6 +78,10 @@ const CustomRefreshButton = () => {
   );
 };
 
+const CustomOpenInCSB = () => {
+  return <BareCodeSandboxButton>Open in CodeSandbox</BareCodeSandboxButton>;
+};
+
 const CustomCodeEditor = () => {
   const { code, updateCode } = useActiveCode();
   const { theme } = useSandpackTheme();
@@ -122,7 +126,7 @@ export const UsingHooks: React.FC = () => (
         }}
       >
         <CustomRefreshButton />
-        {/* <CustomOpenInCSB /> TODO */}
+        <CustomOpenInCSB />
       </div>
 
       <div style={{ width: 400 }}>

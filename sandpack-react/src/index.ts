@@ -12,7 +12,7 @@ export * from "./common/Layout";
 export * from "./common/Stack";
 export * from "./common/ErrorOverlay";
 export * from "./common/LoadingOverlay";
-export * from "./common/CodeSandboxButton";
+export * from "./common/BareCodeSandboxButton";
 export * from "./common/OpenInCodeSandboxButton";
 
 export * from "./hooks/useActiveCode";

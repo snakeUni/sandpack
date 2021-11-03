@@ -67,7 +67,7 @@ export const BareCodeSandboxButton: React.FC<{ className?: string }> = ({
    * This is a safe limit to avoid too long requests (401),
    * as all parameters are attached in the URL
    */
-  if (paramsValues.length > 1000) {
+  if (paramsValues.length > 1500) {
     return (
       <button
         onClick={() => formRef.current?.submit()}
