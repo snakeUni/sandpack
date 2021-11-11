@@ -1,4 +1,11 @@
-import { Box, Install, Resources, SandpackLogo, Text } from "../common";
+import {
+  Box,
+  Install,
+  Resources,
+  SandpackLogo,
+  SandpackPreview,
+  Text,
+} from "../common";
 
 export const Hero: React.FC = () => {
   return (
@@ -8,15 +15,15 @@ export const Hero: React.FC = () => {
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
-        gap: "48px",
+        gap: "50px",
         height: "100%",
         minHeight: "100vh",
-        paddingTop: "100px",
+        padding: "100px 24px 0",
         overflow: "hidden",
 
         "@bp2": {
           background: "$surface",
-        }
+        },
       }}
     >
       <Box
@@ -50,8 +57,8 @@ export const Hero: React.FC = () => {
               letterSpacing: "-0.05em",
 
               "@bp1": {
-                fontSize: "72px"
-              }
+                fontSize: "72px",
+              },
             }}
           >
             Sandpack
@@ -73,19 +80,8 @@ export const Hero: React.FC = () => {
       </Box>
       <Install />
       <Resources />
-      <Box
-        css={{
-          alignItems: "center",
-          background: "$lightBackground",
-          color: "$lightTextPrimary",
-          display: "flex",
-          justifyContent: "center",
-          marginTop: "16px",
-          width: "343px",
-          height: "512px",
-        }}
-      >
-        feature markup.
+      <Box css={{ display: "flex", justifyContent: "center" }}>
+        <SandpackPreview />
       </Box>
     </Box>
   );
