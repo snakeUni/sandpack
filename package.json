@@ -10,6 +10,7 @@
     "plugins/*"
   ],
   "nohoist": [
+    "website/landing/**",
     "website/docs/**",
     "**/html-minifier-terser"
   ],
